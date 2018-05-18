@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if(current_user.admin = true)
+    if(current_user.admin?)
       @posts = Post.all
     else
       @posts = current_user.posts
@@ -73,9 +73,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    if(@post.user.id != current_user.id)
-      redirect_to posts_path
-    end
+    authorize @post
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
