@@ -4,8 +4,6 @@ This is a project done for Sparta global to practice using the Devise gem for au
 
 To use this project git pull or clone the repository to your computer
 
-If you are in sparta-COYI-rails-project change directory into COYI.
-
 If this is the first time using the project run
 
 ```
