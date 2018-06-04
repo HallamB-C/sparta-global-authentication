@@ -1,24 +1,33 @@
-# README
+# Ruby authentication with Devise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project done for Sparta global to practice using the Devise gem for authentication on Rails.
 
-Things you may want to cover:
+To use this project git pull or clone the repository to your computer
 
-* Ruby version
+If you are in sparta-COYI-rails-project change directory into COYI.
 
-* System dependencies
+If this is the first time using the project run
 
-* Configuration
+```
+rails db:drop db:create db:migrate
+```
 
-* Database creation
+Otherwise run
 
-* Database initialization
+```
+rails db:migrate
+```
 
-* How to run the test suite
+Then run
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install
+```
 
-* Deployment instructions
+To add the needed gems. Type
 
-* ...
+```
+rails s
+```
+
+into the console to run the server. You can connect to it by going to localhost:3000 in your browser. You will have to make an accout to test the authentication.
